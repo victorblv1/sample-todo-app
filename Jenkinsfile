@@ -7,10 +7,6 @@ pipeline {
   stage('Setup') {
     steps {
       sh 'wget https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip'
-<<<<<<< HEAD
-=======
-      // sh 'sudo apt-get install zip unzip'
->>>>>>> 25d7640 (final edit of jenkins script)
       sh 'unzip -o LT_Mac.zip'
       sh './LT --user ${LT_USERNAME} --key ${LT_ACCESS_KEY} --tunnelName jenkins-tunnel --infoAPIPort 8000 &'
     }
